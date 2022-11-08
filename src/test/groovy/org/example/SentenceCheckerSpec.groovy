@@ -1,14 +1,11 @@
 package org.example
 
 import spock.lang.Specification
-import spock.lang.Unroll
 
 class SentenceCheckerSpec extends Specification {
     SentenceChecker sentenceChecker = new SentenceChecker()
 
-    @Unroll
-    def "Sentence example #description should evaluate to #isValid (String description, String sentence, Boolean isValid)"() {
-        given:
+    def "Sentence example #description should evaluate to #isValid "() {
 
         when:
         def result = sentenceChecker.checkSentence(example)
